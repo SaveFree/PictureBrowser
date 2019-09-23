@@ -41,7 +41,7 @@ class PictureBrowserItemView: UIScrollView {
     }
 
     public func loadData(_ image: UIImage) {
-        let height = frame.height / image.size.height * frame.width
+        let height = image.size.height / image.size.width  * frame.width
         imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: height)
         scrollViewDidZoom(self)
         let maxSize = frame.size
